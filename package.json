@@ -1,0 +1,38 @@
+{
+  "name": "full-stack-eletro-parte-1-master",
+  "version": "1.0.0",
+  "description": "projeto full stack eletro em nodeJS",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "commonjs": "^0.0.1",
+    "consign": "^0.1.6",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mogoose": "0.0.1-security",
+    "mongoose": "^5.11.15",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "start": "nodemon ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelveja/full-stack-4.git"
+  },
+  "keywords": [
+    "Full",
+    "Stack",
+    "Eletro",
+    "NodeJS"
+  ],
+  "author": "Rafael Silva Veja",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaelveja/full-stack-4/issues"
+  },
+  "homepage": "https://github.com/rafaelveja/full-stack-4#readme"
+}
