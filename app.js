@@ -1,12 +1,15 @@
+const {model} = require('mongoose')
 const app = require('./app/config/server');
 const connection = require('./app/config/connection')
-const Produtos = require('./app/models/Produtos')
+const Schema = require('./app/models/Produtos')
+const Produtos = model("produtos", Schema)
 
 //SELECT
-app.get("/", async (req, res) => {
+app.get("/produtos", async (req, res) => {
     const resultado = await Produtos.find()
 
-    res.json(resultado)
+    
+    res.render('paginas/produtos', {dados:resultado});
 })
 
 // INSERT
@@ -37,22 +40,20 @@ app.delete("/", async (req, res) => {
 
     let resultado = await Produtos.deleteOne({ _id: id})
 
-    res.json(
-        resultado
-    )
+
+    res.render('paginas/produtos', {dados:resultado});
+
 })
 
-var rotaHome = require('./app/routes/home')(app);
-var rotaHome = require('./app/routes/front')(app);
-var rotaHome = require('./app/routes/back')(app);
-var rotaHome = require('./app/routes/contato')(app);
-var rotaHome = require('./app/routes/loja')(app);
-var rotaHome = require('./app/routes/produtos')(app);
-var rotaHome = require('./app/routes/cadastro')(app);
+// var rotaHome = require('./app/routes/home')(app);
+// var rotaFront = require('./app/routes/front')(app);
+// var rotaBack = require('./app/routes/back')(app);
+// var rotaContato = require('./app/routes/contato')(app);
+// var rotaLoja = require('./app/routes/loja')(app);
+// var rotaProdutos = require('./app/routes/produtos')(app);
+// var rotaCadastro = require('./app/routes/cadastro')(app);
 
-app.listen(3000, function(){
-    console.log("servidor rodando com Express+EJS+CommonJS");
-});
+
 
 
 

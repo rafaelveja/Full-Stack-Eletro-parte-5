@@ -1,18 +1,18 @@
-// var mysql = require('mysql');
+var mysql = require('mysql');
 
-// var connMySQL = function(){
-//     console.log(" database connection established ");
-//     return connection = mysql.createConnection({
-//         host:'localhost',
-//         user:'root',
-//         password:'',
-//         database:'projeto_node'
-//     });
-// }
+var connMySQL = function(){
+    console.log(" database connection established ");
+    return connection = mysql.createConnection({
+        host:'localhost',
+        user:'root',
+        password:'',
+        database:'projeto_node'
+    });
+}
 
-// module.exports = function(){
-//     return connMySQL;    
-// }
+module.exports = function(){
+    return connMySQL;    
+}
 
 
 // codigo antes do consign

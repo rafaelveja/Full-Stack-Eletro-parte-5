@@ -1,6 +1,19 @@
+const consign = require('consign')
 const express = require('express')
 const app = express()
+
+
+
 app.use(express.json())
+
+consign()
+.include('./app/routes')
+.then('./app/config/database.js')
+.then('./app/models')
+.into(app)
+
+app.set('view engine', "ejs")
+app.set('views', './app/views')
 
 const port = 8080
 app.listen(port, () => {

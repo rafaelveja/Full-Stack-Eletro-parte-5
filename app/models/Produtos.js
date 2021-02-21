@@ -17,6 +17,6 @@ const ProdutosSchema = new Schema({
     }
 })
 
-const modelo = model("produtos", ProdutosSchema)
 
-module.exports = modelo
+
+module.exports = ProdutosSchema
